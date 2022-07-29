@@ -84,3 +84,12 @@ Counter({'i': 4, 's': 4, 'p': 2, 'm': 1})
 
 	x = isinstance(y, myObj)
 	
+
+
+-The format() method formats the specified value(s) and insert them inside the string's placeholder.
+
+The placeholder is defined using curly brackets: {}. Read more about the placeholders in the Placeholder section below.
+
+The format() method returns the formatted string.
+
+txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36) --> My name is John, I'm 36
