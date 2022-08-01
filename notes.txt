@@ -96,4 +96,5 @@ txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36) --> My n
 
 
 -set() --> wouldn't repeat the number in the list and won't let reapted number in it.
-dfggdf
+dfggdfdfgd
+fjk
