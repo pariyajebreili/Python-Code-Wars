@@ -93,3 +93,6 @@ The placeholder is defined using curly brackets: {}. Read more about the placeho
 The format() method returns the formatted string.
 
 txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36) --> My name is John, I'm 36
+
+
+-set() --> wouldn't repeat the number in the list and won't let reapted number in it.
