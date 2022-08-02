@@ -48,7 +48,8 @@ def sum_of_intervals(intervals):
             
     return len(result)
 
-sum_of_intervals([(1, 4), (7, 10), (3, 5)])
+# sum_of_intervals([(1, 4), (7, 10), (3, 5)])
+
 
 # 2
 def sum_of_intervals(intervals):

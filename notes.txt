@@ -96,5 +96,9 @@ txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36) --> My n
 
 
 -set() --> wouldn't repeat the number in the list and won't let reapted number in it.
-dfggdfdfgd
-fjk
+
+
+-string.ascii_lowercase[:26] --> give the a-z alphabet but we could code this in another form 
+set(string.ascii_lowercase)
+
+-issubset --> if something subset of other thing.
