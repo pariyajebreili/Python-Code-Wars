@@ -102,3 +102,26 @@ txt1 = "My name is {fname}, I'm {age}".format(fname = "John", age = 36) --> My n
 set(string.ascii_lowercase)
 
 -issubset --> if something subset of other thing.
+
+
+-The rstrip() method removes any trailing characters (characters at the end a string), space is the default trailing character to remove.
+
+txt = "banana,,,,,ssqqqww....."
+x = txt.rstrip(",.qsw")
+print(x)
+
+-->banana
+
+
+txt = "banana,,,,,ssqqqww....."
+x = txt.rstrip(".qsw") #i made the chnge in paranteses
+print(x)
+
+-->banana,,,,,
+
+
+txt = ",,banana,,,,,ssqqqww....."
+x = txt.rstrip(",.qsw")
+print(x)
+
+--> ,,banana
