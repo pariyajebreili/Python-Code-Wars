@@ -22,15 +22,17 @@ result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", 
 
 # 1
 def solution(string, markers):
-    ss = string.split('\n')
-    for i in range(len(ss)):
-        s = ss[i]
+    newstring = string.split('\n')
+    for i in range(len(newstring)):
+        part = newstring[i]
         for marker in markers:
-            index = s.find(marker)
+            index = part.find(marker)
             if index >= 0:
-                s = s[:index].rstrip()
-        ss[i] = s
-    return '\n'.join(ss)
+                part = part[:index].rstrip()
+        newstring[i] = part
+    return '\n'.join(newstring)
+
+
 
 # 2
 def solution(string,markers):
