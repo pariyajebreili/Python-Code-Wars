@@ -17,12 +17,12 @@ to_postfix("5+(6-2)*9+3^(7-1)") # Should return "562-9*+371-^+"
 to_postfix("1^2^3") # Should return "123^^"
 '''
 
+# 1
 LEFT  = lambda a,b: a>=b
 RIGHT = lambda a,b: a>b
 PREC  = {'+': 2, '-': 2, '*': 3, '/': 3, '^': 4, '(': 1, ')': 1}
 
 OP_ASSOCIATION = {'+': LEFT, '-': LEFT, '*': LEFT, '/': LEFT, '^': RIGHT}
-
 
 def to_postfix (infix):
     stack, output = [], []
@@ -41,3 +41,23 @@ def to_postfix (infix):
             stack.append(c)
             
     return ''.join(output + stack[::-1])
+
+
+
+
+
+# 2
+def to_postfix (infix):
+    for i in range(10):
+        infix = infix.replace(str(i), f"x({i})")
+    infix = infix.replace('^', '**')
+    class x:
+        def __init__(self, v): self.v = str(v)
+        def __add__(self, y): return x(self.v + y.v + '+')
+        def __sub__(self, y): return x(self.v + y.v + '-')
+        def __mul__(self, y): return x(self.v + y.v + '*')
+        def __truediv__(self, y): return x(self.v + y.v + '/')
+        def __pow__(self, y): return x(self.v + y.v + '^')
+    return eval(infix).v
+
+# to_postfix("5+(6-2)*9+3^(7-1)")
